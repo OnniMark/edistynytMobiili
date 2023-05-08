@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.AuthFailureError
 import com.android.volley.Request
 import com.android.volley.Response
@@ -27,6 +29,12 @@ class TodoFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+
+    // alustetaan viittaus adapteriin sekä luodaan LinearLayoutManager
+// RecyclerView tarvitsee jonkin LayoutManagerin, joista yksinkertaisin on Linear
+    private lateinit var adapter: TodoAdapter
+    private lateinit var linearLayoutManager: LinearLayoutManager
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,8 +48,15 @@ class TodoFragment : Fragment() {
             getDotos()
         }
 
+        // Luodaan linear layout manager ja kytketään se ulkoasussa olevaan Recyclervieweriin
+        // Tarkista, että recyclerviewerin id: täsmää binding koodin kanssa
+        linearLayoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = linearLayoutManager
+
         return root
     }
+
+
 
     // tällä haetaan dataa rajapinnasta
     fun getDotos(){
@@ -64,13 +79,12 @@ class TodoFragment : Fragment() {
 
                 var rows : List<Todo> = gson.fromJson(response, Array<Todo>::class.java).toList()
 
-                // kokeillaan käyttää rows-listaa, jotta tiededään tuleeko dataa ulos
-                Log.d("TESTI", "Todosien määrä: " + rows.size)
 
-                // loopataaan kaikki todosit läpi ja tulostetaan jokainen title
-                for(item: Todo in rows ){
-                    Log.d("Testi", item.title.toString())
-                }
+                // luodaan adapteri omalla datalla ja kytketään se recyclervieweriin.
+                adapter = TodoAdapter(rows)
+                binding.recyclerView.adapter = adapter
+
+
             },
             Response.ErrorListener {
                 // typically this is a connection error
@@ -99,4 +113,6 @@ class TodoFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
