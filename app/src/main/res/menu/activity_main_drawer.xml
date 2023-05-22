@@ -26,5 +26,18 @@
             android:id="@+id/todoFragment"
             android:title="TODO API"/>
 
+        <item
+            android:id="@+id/mapsFragment"
+            android:title="Google Maps Test"/>
+
+        <item
+            android:id="@+id/feedbackReadFragment"
+            android:title="Feedback Read"/>
+
+        <item
+            android:id="@+id/feedbackSendFragment"
+            android:title="Feedback Send"/>
+
+
     </group>
 </menu>

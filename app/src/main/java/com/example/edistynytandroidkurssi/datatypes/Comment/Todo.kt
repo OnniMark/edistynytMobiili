@@ -1,4 +1,4 @@
-package com.example.edistynytandroidkurssi
+package com.example.edistynytandroidkurssi.datatypes.Comment
 
 import com.google.gson.annotations.SerializedName
 

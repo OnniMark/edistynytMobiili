@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical"
+    tools:context=".FeedbackSendFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Send us feedback!"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Your name:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_feedback_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:minHeight="48dp"
+        android:ems="10"
+        android:hint="Who are you?"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Your location:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_feedback_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:minHeight="48dp"
+        android:ems="10"
+        android:hint="Where are you?"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Your feedback:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_feedback_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:minHeight="48dp"
+        android:ems="10"
+        android:hint="Please write your thoughts here...."
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button_send_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Send feedback" />
+</LinearLayout>

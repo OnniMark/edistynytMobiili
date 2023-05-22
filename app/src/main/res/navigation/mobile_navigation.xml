@@ -60,4 +60,35 @@
             app:argType="integer"
             android:defaultValue="-1" />
     </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.edistynytandroidkurssi.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_cityWeatherFragment"
+            app:destination="@id/cityWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityWeatherFragment"
+        android:name="com.example.edistynytandroidkurssi.CityWeatherFragment"
+        android:label="fragment_city_weather"
+        tools:layout="@layout/fragment_city_weather" >
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lon"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackReadFragment"
+        android:name="com.example.edistynytandroidkurssi.FeedbackReadFragment"
+        android:label="fragment_feedback_read"
+        tools:layout="@layout/fragment_feedback_read" />
+    <fragment
+        android:id="@+id/feedbackSendFragment"
+        android:name="com.example.edistynytandroidkurssi.FeedbackSendFragment"
+        android:label="fragment_feedback_send"
+        tools:layout="@layout/fragment_feedback_send" />
 </navigation>

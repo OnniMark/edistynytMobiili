@@ -12,12 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.example.edistynytandroidkurssi.databinding.FragmentDetailBinding
-import com.example.edistynytandroidkurssi.databinding.FragmentTodoBinding
 import com.example.edistynytandroidkurssi.databinding.FragmentTodoDetailBinding
+import com.example.edistynytandroidkurssi.datatypes.Comment.Todo
 import com.google.gson.GsonBuilder
 
 

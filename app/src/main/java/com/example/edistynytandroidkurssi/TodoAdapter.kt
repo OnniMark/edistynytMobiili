@@ -1,6 +1,5 @@
 package com.example.edistynytandroidkurssi
 
-import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +7,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.edistynytandroidkurssi.databinding.RecyclerViewItemBinding
+import com.example.edistynytandroidkurssi.datatypes.Comment.Todo
 
 class TodoAdapter (private val Todo: List<Todo>) : RecyclerView.Adapter<TodoAdapter.TodoHolder>() {
 
