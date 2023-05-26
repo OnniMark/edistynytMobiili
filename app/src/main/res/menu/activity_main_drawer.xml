@@ -26,6 +26,8 @@
             android:id="@+id/todoFragment"
             android:title="TODO API"/>
 
+
+
         <item
             android:id="@+id/mapsFragment"
             android:title="Google Maps Test"/>
@@ -37,6 +39,14 @@
         <item
             android:id="@+id/feedbackSendFragment"
             android:title="Feedback Send"/>
+
+        <item
+            android:id="@+id/weatherStationFragment"
+            android:title="Weather MQTT"/>
+
+        <item
+            android:id="@+id/remoteMessageFragment"
+            android:title="HiveMQ Test"/>
 
 
     </group>

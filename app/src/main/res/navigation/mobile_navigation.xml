@@ -91,4 +91,14 @@
         android:name="com.example.edistynytandroidkurssi.FeedbackSendFragment"
         android:label="fragment_feedback_send"
         tools:layout="@layout/fragment_feedback_send" />
+    <fragment
+        android:id="@+id/weatherStationFragment"
+        android:name="com.example.edistynytandroidkurssi.WeatherStationFragment"
+        android:label="fragment_weather_station"
+        tools:layout="@layout/fragment_weather_station" />
+    <fragment
+        android:id="@+id/remoteMessageFragment"
+        android:name="com.example.edistynytandroidkurssi.RemoteMessageFragment"
+        android:label="fragment_remote_message"
+        tools:layout="@layout/fragment_remote_message" />
 </navigation>
