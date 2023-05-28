@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:duration="70"
+        android:drawable="@drawable/robo1"/>
+
+    <item
+        android:duration="70"
+        android:drawable="@drawable/robo2"/>
+    <item
+        android:duration="70"
+        android:drawable="@drawable/robo3"/>
+    <item
+        android:duration="70"
+        android:drawable="@drawable/robo4"/>
+    <item
+        android:duration="70"
+        android:drawable="@drawable/robo5"/>
+    <item
+        android:duration="70"
+        android:drawable="@drawable/robo6"/>
+
+</animation-list>

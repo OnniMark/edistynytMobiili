@@ -5,31 +5,30 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".WeatherStationFragment">
-
-    <TextView
-        android:id="@+id/textView_weather_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Waiting...."
-        android:textSize="22sp" />
+    tools:context=".CustomViewTesterFragment">
 
     <com.github.anastr.speedviewlib.SpeedView
-        android:id="@+id/speedViewTemperature"
+        android:id="@+id/speedView"
         app:sv_withTremble="false"
         app:sv_minSpeed="-50"
         app:sv_maxSpeed="50"
         app:sv_unit="℃"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp" />
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp" />
+
 
     <com.example.edistynytandroidkurssi.CustonTemperatureView
-        android:id="@+id/customtemperatureview_temperature"
+        android:id="@+id/customtemperatureview_test"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/button_set_random_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHANGE TEMPERATURE" />
 
     <com.example.edistynytandroidkurssi.LatestDataView
         android:id="@+id/LatestDataViewTest"
@@ -37,5 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/customborder" />
+
+    <Button
+        android:id="@+id/button_add_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Data" />
+
 
 </LinearLayout>

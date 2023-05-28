@@ -101,4 +101,14 @@
         android:name="com.example.edistynytandroidkurssi.RemoteMessageFragment"
         android:label="fragment_remote_message"
         tools:layout="@layout/fragment_remote_message" />
+    <fragment
+        android:id="@+id/customViewTesterFragment"
+        android:name="com.example.edistynytandroidkurssi.CustomViewTesterFragment"
+        android:label="fragment_custom_view_tester"
+        tools:layout="@layout/fragment_custom_view_tester" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.edistynytandroidkurssi.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
 </navigation>

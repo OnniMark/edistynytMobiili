@@ -48,6 +48,16 @@
             android:id="@+id/remoteMessageFragment"
             android:title="HiveMQ Test"/>
 
+        <item
+            android:id="@+id/customViewTesterFragment"
+            android:title="Custom View Test "/>
+
+        <item
+            android:id="@+id/calendarFragment"
+            android:title="Calendar"/>
+
+
+
 
     </group>
 </menu>

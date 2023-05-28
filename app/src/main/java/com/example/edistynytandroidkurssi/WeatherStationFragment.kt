@@ -14,6 +14,7 @@ import com.google.gson.GsonBuilder
 import com.hivemq.client.mqtt.MqttClient
 import com.hivemq.client.mqtt.mqtt3.Mqtt3AsyncClient
 import com.hivemq.client.mqtt.mqtt3.message.connect.connack.Mqtt3ConnAck
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -56,12 +57,23 @@ class WeatherStationFragment : Fragment() {
                     text += "\n"
                     text += "Humidity: ${humidity}%"
 
+
+                    val sdf = SimpleDateFormat(" HH:mm:ss")
+                    val currentDate = sdf.format(Date())
+
+                    var dataText : String = "${currentDate} - Temperature: ${temperature}℃ - Humidity: ${humidity}%"
+
                     // koska MQTT plugin ajaa koodia ja käsittelee dataa
                     // tausta-ajalla omassa säikeessään  eli threadissa
                     // joudumme laittamaan ulkoasuun liittyvän koodin runOnUiThread-blokin
                     // sisälle. Muutoin tulee virhe, että koodit toimivat eri säikeissä
                     activity?.runOnUiThread {
                         binding.textViewWeatherText.text = text
+                        // liitetään luotu mittari fragmenttiin
+                        binding.speedViewTemperature.speedTo(temperature.toFloat())
+                        binding.customtemperatureviewTemperature.changeTemperature(temperature.toInt())
+
+                        binding.LatestDataViewTest.addData(dataText)
                     }
 
 
