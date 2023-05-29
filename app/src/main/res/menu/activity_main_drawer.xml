@@ -57,6 +57,11 @@
             android:title="Calendar"/>
 
 
+        <item
+            android:id="@+id/chartFragment"
+            android:title="Chart TEST"/>
+
+
 
 
     </group>

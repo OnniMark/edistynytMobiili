@@ -111,4 +111,9 @@
         android:name="com.example.edistynytandroidkurssi.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.example.edistynytandroidkurssi.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" />
 </navigation>

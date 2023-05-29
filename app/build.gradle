@@ -61,4 +61,6 @@ dependencies {
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
     implementation 'com.github.anastr:speedviewlib:1.6.0'
     implementation 'com.github.npanigrahy:Custom-Calendar-View:v1.1'
+
+    implementation 'com.github.AAChartModel:AAChartCore-Kotlin:7.2.0'
 }
